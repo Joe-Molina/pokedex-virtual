@@ -63,7 +63,7 @@ form h2 {
 }
 
 .pokemons-section article {
-    width: 100px;
+    width: 200px;
     margin: 20px;
     text-align: center;
     border: thin solid #000;
@@ -81,4 +81,23 @@ form h2 {
     font-family:'Press Start 2P', 'cursive';
     font-size: 9px;
     padding: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .pokemons-section article {
+        width: 100%;
+    }
+
+    .pokemon-info{
+        width: 100%;
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pokemon-info img{
+        width: 300px;
+    }
 }
