@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+body{
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-purpura-cielo-nublado-tarde-grupo-cumulos-nubes-cirros-ilustracion-dibujos-animados-plana_1284-62768.jpg?w=1060&t=st=1685316347~exp=1685316947~hmac=35d079467ba82a3b7a31c30e662c7b034dc98627460b2d8e05ac1d18a18400d3');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 form {
     width: 100%;
     height: 200px;
@@ -27,6 +35,20 @@ form h2 {
     margin: 0 auto;
 }
 
+.pokemon-info{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Press Start 2P', 'cursive';
+}
+
 .pokemons-section {
     width: 100%;
     height: auto;
@@ -46,10 +68,13 @@ form h2 {
     text-align: center;
     border: thin solid #000;
     transition: .2s;
+    background-color: aliceblue;
+    opacity: .7;
 }
 
 .pokemons-section article:hover{
     transform: scale(1.4);
+    opacity: 1;
 }
 
 .pokemons-section article p {
