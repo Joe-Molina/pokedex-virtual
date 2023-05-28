@@ -42,4 +42,6 @@ const getPokemon2 = async () => {
 
 d.addEventListener('DOMContentLoaded', getPokemon2);
 
-d.addEventListener('click',)
+d.addEventListener('click', e => {
+    
+})
