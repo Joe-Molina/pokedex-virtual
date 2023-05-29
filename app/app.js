@@ -28,7 +28,7 @@ const d = document,
             
             $template.querySelector('.name').textContent = nombrePoke;
             $template.querySelector('img').src = imgPoke;
-            $template.querySelector("article").classList.add('pokemon-article');
+            $template.querySelector("a").classList.add('pokemon-article');
             let $clone = d.importNode($template, true);
             $fragment.appendChild($clone);
         })
@@ -59,7 +59,9 @@ const sexo = async () =>{
             d.querySelector('.pokemon-nombre').textContent = `name: ${json3.name}`;
             d.querySelector('.pokemon-tipo').textContent = `type: ${json3.types[0].type.name}`;
             d.querySelector('.pokemon-img').src = json3.sprites.other["official-artwork"].front_default;
-                
+            
+
             })
         })
 }
+

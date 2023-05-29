@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>virtual Pokedex</title>
 </head>
 <body>
     <!-- por ahora no lo uso, funcion proximamente
@@ -21,7 +21,7 @@
        </div>
     </form>
     -->
-    <section class="pokemon-info">
+    <section class="pokemon-info" id="pokemon-info">
         <img src="" alt="" class="pokemon-img">
         <div>
             <h2 class="pokemon-nombre"></h2>
@@ -35,10 +35,10 @@
 </article>
 </section>
 <template id="crud-template">
-<article>
+<a href="#pokemon-info">
     <img src="" alt="" class="">
     <p class="name"></p>
-</article>
+</a>
 </template>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./app/app.js"></script>

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -62,7 +63,7 @@ form h2 {
  text-align: center;
 }
 
-.pokemons-section article {
+.pokemons-section a {
     width: 200px;
     margin: 20px;
     text-align: center;
@@ -70,14 +71,16 @@ form h2 {
     transition: .2s;
     background-color: aliceblue;
     opacity: .7;
+    text-decoration: none;
+    color: #000;
 }
 
-.pokemons-section article:hover{
+.pokemons-section a:hover{
     transform: scale(1.4);
     opacity: 1;
 }
 
-.pokemons-section article p {
+.pokemons-section a p {
     font-family:'Press Start 2P', 'cursive';
     font-size: 9px;
     padding: 5px;
@@ -85,8 +88,8 @@ form h2 {
 
 
 @media (max-width: 600px) {
-    .pokemons-section article {
-        width: 100%;
+    .pokemons-section a {
+        width: 40%;
     }
 
     .pokemon-info{
@@ -95,6 +98,11 @@ form h2 {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+    }
+
+    .pokemon-info div {
+        background-color: aliceblue;
+        text-align: center;
     }
 
     .pokemon-info img{
