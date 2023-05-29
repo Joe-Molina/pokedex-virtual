@@ -76,11 +76,8 @@
     }
 
     .allPokemons-title-container {
-        position: fixed;
         z-index: 997;
         background-color: rgb(252, 96, 76);
-        top: 0;
-        left: 0;
         width: 100%;
         height: 60px;
         display: flex;
@@ -152,6 +149,12 @@
         align-items: center;
     }
 
+    .allPokemons-title-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     .buscar-tipo{
         background-color: rgb(17, 117, 184);
         position: fixed;
@@ -176,5 +179,9 @@
         border-radius: 15px;
         font-family: 'Press Start 2P', 'cursive';
         font-size: 10px;
+    }
+
+    .all-container {
+        margin-top: 60px;
     }
 }
