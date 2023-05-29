@@ -53,33 +53,37 @@ const d = document,
             }   
     
         d.querySelectorAll('.buscar-tipo button').forEach(el =>{
-            const type = el.textContent;
+            const type = el.dataset.type;
+            const type2 = el.textContent;
 
             if(e.target.closest(`.type-${type}`)){
                 d.querySelectorAll('.pokemon-article').forEach( pokemon =>{
                     pokemon.remove()
                 })
-                burcarPorTipo(type)
+                burcarPorTipo(type,type2)
             }
         })
+
+        if(e.target.closest('.header nav')){
+            e.preventDefault()
+            console.log($('.buscar-tipo').classList.toggle('display-none'))
+        }
 
 })
 
 
 
-    const burcarPorTipo = async (tipo) =>{
+    const burcarPorTipo = async (tipo,tipo2) =>{
         d.querySelectorAll('.buscar-tipo button').forEach(el =>{
             el.disabled = true
         })
+        $('.allPokemons-title').textContent = `Pokemons de tipo ${tipo2}`   
         let respuestaTipos = await axios.get(`https://pokeapi.co/api/v2/type/${tipo}`),
             jsonTipos = respuestaTipos.data.pokemon;
-
-        console.log(jsonTipos)
         
         const requestTipos = jsonTipos.map(el => axios.get(`${el.pokemon.url}`)),
             responsesTipos = await Promise.all(requestTipos),
             dataTipos = responsesTipos.map(responsesTipos => responsesTipos.data)
-        console.log(dataTipos)
 
         dataTipos.forEach(pokemon => {
             const nombrePoke = pokemon.name;
@@ -98,4 +102,5 @@ const d = document,
         d.querySelectorAll('.buscar-tipo button').forEach(el =>{
             el.disabled = false;
         })
+
     }

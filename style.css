@@ -13,6 +13,8 @@
     width: 100vw;
     height: 100vh;
     z-index: -100;
+    top: 0;
+    right: 0;   
 }
 /* HEADER */
     .header {
@@ -121,5 +123,39 @@
 /* RESPONSIVE */
 
 @media (max-width: 600px) {
+    .fondo{
+        width: 100vw;
+        height: 100vh;
+    }
 
+    .header {
+        position: fixed;
+        z-index: 999;
+        bottom: 0;
+        justify-content: space-between;
+    }
+
+    .buscar-tipo{
+        background-color: rgb(17, 117, 184);
+        position: fixed;
+        height: 60px;
+        bottom: 50px;
+        z-index: 999;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: auto;
+    }
+
+    .display-none{
+        display: none;
+    }
+
+    .buscar-tipo button {
+        margin: 5px;
+        border: none;
+        width: 80px;
+        height: 20px; 
+        border-radius: 15px;
+    }
 }
