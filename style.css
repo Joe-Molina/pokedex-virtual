@@ -144,13 +144,19 @@
         z-index: 999;
         bottom: 0;
         justify-content: space-between;
+        height: 70px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
     }
 
     .buscar-tipo{
         background-color: rgb(17, 117, 184);
         position: fixed;
-        height: 60px;
-        bottom: 50px;
+        height: 100px;
+        bottom: 70px;
         z-index: 999;
         display: flex;
         flex-wrap: wrap;
@@ -165,8 +171,10 @@
     .buscar-tipo button {
         margin: 5px;
         border: none;
-        width: 80px;
-        height: 20px; 
+        width: 100px;
+        height: 30px; 
         border-radius: 15px;
+        font-family: 'Press Start 2P', 'cursive';
+        font-size: 10px;
     }
 }
