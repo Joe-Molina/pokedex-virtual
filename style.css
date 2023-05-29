@@ -5,107 +5,121 @@
     scroll-behavior: smooth;
 }
 
-body{
-    background-image: url('https://img.freepik.com/vector-gratis/fondo-purpura-cielo-nublado-tarde-grupo-cumulos-nubes-cirros-ilustracion-dibujos-animados-plana_1284-62768.jpg?w=1060&t=st=1685316347~exp=1685316947~hmac=35d079467ba82a3b7a31c30e662c7b034dc98627460b2d8e05ac1d18a18400d3');
+.fondo{
+    background-image: url('./assets/fondo1.jpg');
     background-position: center center;
-    background-size: cover;
     background-repeat: no-repeat;
-
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
 }
+/* HEADER */
+    .header {
+        background-color: rgb(252, 96, 76);
+        width: 100%;
+        height: 50px;
+        display: flex;  
+        justify-content: space-around;
 
-form {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-form h2 {
-    font-family: 'Press Start 2P', 'cursive';
-    padding-top: 15px;
-    text-align: center;
-}
-
-.form-div {
-    display: inline-block;
-    margin: auto;
-}
-
-.buscar-nombre {
-    margin: 0 auto;
-}
-
-.pokemon-info{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-}
-
-.pokemon-info div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Press Start 2P', 'cursive';
-}
-
-.pokemons-section {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.allPokemons-title{
- height: 50px;
- font-family: 'Press Start 2P', 'cursive';
- text-align: center;
-}
-
-.pokemons-section a {
-    width: 200px;
-    margin: 20px;
-    text-align: center;
-    border: thin solid #000;
-    transition: .2s;
-    background-color: aliceblue;
-    opacity: .7;
-    text-decoration: none;
-    color: #000;
-}
-
-.pokemons-section a:hover{
-    transform: scale(1.4);
-    opacity: 1;
-}
-
-.pokemons-section a p {
-    font-family:'Press Start 2P', 'cursive';
-    font-size: 9px;
-    padding: 5px;
-}
-
-
-@media (max-width: 600px) {
-    .pokemons-section a {
-        width: 40%;
     }
 
-    .pokemon-info{
-        width: 100%;
+    .header ul {
         height: 100%;
-        flex-direction: column-reverse;
-        justify-content: center;
+        display: flex;
         align-items: center;
     }
 
-    .pokemon-info div {
-        background-color: aliceblue;
+    .header ul li {
+        width: 100%;
+        height: 100%;
+        padding: 0 25px;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        transition: .2s;
+    }
+    
+    
+        .header ul li:hover{
+            background-color: yellow;
+            color: aliceblue;
+        }
+
+    .header ul li a{
+        text-decoration: none;
+        color: black;
+        font-family:'Press Start 2P', 'cursive';
+        font-size: 10px;
         text-align: center;
     }
 
-    .pokemon-info img{
-        width: 300px;
+    .logo img {
+        width: 100%;
+        height: 45px;
+        transition: .2s;
     }
+
+    .logo img:hover {
+        transform: scale(1.2);
+    }
+
+
+/* CONTENEDOR */
+    .all-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .allPokemons-title{
+    height: 50px;
+    font-family: 'Press Start 2P', 'cursive';
+    text-align: center;
+    color: rgb(255, 255, 120);
+    margin-top: 20px;
+    }
+
+    .pokemons-section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .pokemons-section div {
+        width: 80px;
+        height: 100px;
+        margin: 20px;
+        text-align: center;
+        border: thin solid #000;
+        transition: .1s;
+        background-color: aliceblue;
+        opacity: .9;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .pokemons-section div img {
+        width: 100%;
+    }
+
+    .pokemons-section div:hover{
+        transform: scale(1.3);
+        opacity: 1;
+    }
+
+    .pokemons-section div p {
+        font-family:'Press Start 2P', 'cursive';
+        font-size: 7px;
+        padding: 5px;
+    }
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
 }

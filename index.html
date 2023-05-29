@@ -11,34 +11,47 @@
     <title>virtual Pokedex</title>
 </head>
 <body>
-    <!-- por ahora no lo uso, funcion proximamente
-    <form action="" class="buscar-form">
-        <h2>buscar pokemon</h2>
-       <div class="form-div">
-        <input type="text" name="pokemon-nombre" id="" class="buscar-nombre">
-        <input type="submit" value="enviar" class="submit">
-        <input type="hidden" name="id">
-       </div>
-    </form>
-    -->
-    <section class="pokemon-info" id="pokemon-info">
-        <img src="" alt="" class="pokemon-img">
-        <div>
-            <h2 class="pokemon-nombre"></h2>
-            <p class="pokemon-tipo"></p>
-        </div>
-    </section>
-    <h2 class="allPokemons-title">Todos los pokemons</h2>
-    <section class="pokemons-section">
-    </section>
+    <div class="fondo"></div>
+    <header class="header">
+        <span class="logo">
+            <img src="./assets/logoPokemon.png" alt="">
+        </span>
+        <nav>
+            <ul>
+                <li><a href="#">Pokemons</a></li>
+                <li><a href="#">Movimientos</a></li>
+                <li><a href="#">Items</a></li>
+                <li><a href="#">cosas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="all-container">
 
-</article>
-</section>
+        <section class="buscar-tipo">
+            <button class="type-normal" disabled>normal</button>
+            <button class="type-electric" disabled>electric</button>
+            <button class="type-fighting" disabled>fighting</button>
+            <button class="type-poison" disabled>poison</button>
+            <button class="type-ground" disabled>ground</button>
+            <button class="type-rock" disabled>rock</button>
+            <button class="type-bug" disabled>bug</button>
+            <button class="type-steel" disabled>steel</button>
+            <button class="type-fire" disabled>fire</button>
+            <button class="type-water" disabled>water</button>
+            <button class="type-grass" disabled>grass</button>
+            <button class="type-psychic" disabled>psychic</button>
+        </section>
+
+        <h2 class="allPokemons-title">Todos los pokemons</h2>
+        <section class="pokemons-section">
+        </section>
+    </div>
+
 <template id="crud-template">
-<a href="#pokemon-info">
+<div href="">
     <img src="" alt="" class="">
     <p class="name"></p>
-</a>
+</div>
 </template>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./app/app.js"></script>
